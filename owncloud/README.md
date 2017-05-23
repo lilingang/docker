@@ -5,8 +5,9 @@ Docker image for [owncloud](https://owncloud.org/) based on image [owncloud](htt
 # How to use this image
 ## SSL Certificate 
 A certificate is required to use this image.
-1. create a new folder for the certificate
+1. Create a new folder for the certificate
 2. Make sure that the certificate file name is `chain.pem` and domain key is `domain.key`
+
 ## Start btsync
 Starting the owncloud instance:
 ```
@@ -25,9 +26,9 @@ Then go to [https://youdomain.com/](https://youdomain.com) and go through the wi
 docker run \
 --restart=always \
 -p 443:443 \
--v path/to/apps:/var/www/html/apps \
--v path/to/config:/var/www/html/config \
--v path/to/data:/var/www/html/data \
+-v /path/to/apps:/var/www/html/apps \
+-v /path/to/config:/var/www/html/config \
+-v /path/to/data:/var/www/html/data \
 -v /path/to/certificate-folder:/ssl-cert \
 --name owncloud \
 -d lilg/owncloud
