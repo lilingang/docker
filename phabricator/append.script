@@ -7,3 +7,7 @@ if [[ ! -z "$TIMEZONE" ]]; then
 else
     echo "  \"phabricator.timezone\":\"Asia/Shanghai\"," >> ${PHAB_LOCAL_JSON};
 fi
+
+if [[ ! -z "$DEFAULT_MAIL" ]]; then
+    echo "  \"metamta.default-address\":\"${DEFAULT_MAIL}\"," >> ${PHAB_LOCAL_JSON};
+fi
