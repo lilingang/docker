@@ -1,0 +1,9 @@
+if [[ ! -z "$PHABRICATOR_REPOSITORY_PATH" ]]; then
+    echo "  \"repository.default-local-path\":\"${PHABRICATOR_REPOSITORY_PATH}\"," >> ${PHAB_LOCAL_JSON};
+fi
+
+if [[ ! -z "$TIMEZONE" ]]; then
+    echo "  \"phabricator.timezone\":\"${TIMEZONE}\"," >> ${PHAB_LOCAL_JSON};
+else
+    echo "  \"phabricator.timezone\":\"Asia/Shanghai\"," >> ${PHAB_LOCAL_JSON};
+fi
