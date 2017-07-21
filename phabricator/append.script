@@ -1,3 +1,4 @@
+echo "  \"pygments.enabled\":true," >> ${PHAB_LOCAL_JSON};
 if [[ ! -z "$PHABRICATOR_REPOSITORY_PATH" ]]; then
     echo "  \"repository.default-local-path\":\"${PHABRICATOR_REPOSITORY_PATH}\"," >> ${PHAB_LOCAL_JSON};
 fi
