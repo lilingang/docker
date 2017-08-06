@@ -10,5 +10,5 @@ ADD default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
 
 EXPOSE 443
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["apache2-foreground"]
